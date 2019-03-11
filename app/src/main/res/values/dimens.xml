@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="center_header_horizontal">24dp</dimen>
+    <dimen name="center_instructions_horizontal">60dp</dimen>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignInActivity">
+
+    <TextView
+        android:id="@+id/sign_in_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:paddingTop="?attr/actionBarSize"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="@dimen/center_header_horizontal"
+        android:layout_marginEnd="@dimen/center_header_horizontal"
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        android:text="@string/app_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/sign_in_email_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="@dimen/center_instructions_horizontal"
+        android:layout_marginEnd="@dimen/center_instructions_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_header">
+        <EditText android:id="@+id/sign_in_email_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email_text"
+            android:autofillHints="email"
+            tools:ignore="TextFields,UnusedAttribute"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/sign_in_password_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/center_instructions_horizontal"
+        android:layout_marginEnd="@dimen/center_instructions_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_email_input_layout">
+        <EditText android:id="@+id/sign_in_password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="@string/password_text"
+            android:autofillHints="password"
+            tools:ignore="TextFields,UnusedAttribute"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/sign_in_send_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="@dimen/center_instructions_horizontal"
+        android:layout_marginEnd="@dimen/center_instructions_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_password_input_layout"
+        android:text="@string/sign_in_send" />
+
+
+
+    <TextView
+        android:id="@+id/sign_in_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:layout_marginStart="@dimen/center_instructions_horizontal"
+        android:layout_marginEnd="@dimen/center_instructions_horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textSize="14sp"
+        android:text="@string/sign_in_create_account"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_send_request"/>
+
+    <TextView
+        android:id="@+id/sign_in_forgot_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:layout_marginStart="@dimen/center_instructions_horizontal"
+        android:layout_marginEnd="@dimen/center_instructions_horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textSize="14sp"
+        android:text="@string/sign_in_forgot_password"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_sign_up"/>
+
+
+    <ProgressBar
+        android:id="@+id/sign_in_progress_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/center_instructions_horizontal"
+        android:layout_marginEnd="@dimen/center_instructions_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_forgot_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+</android.support.constraint.ConstraintLayout>
