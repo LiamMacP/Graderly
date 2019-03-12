@@ -53,7 +53,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (Objects.nonNull(currentUser)) {
             Log.d(TAG, "User is already signed in.");
-            Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+            Intent intent = new Intent(SignInActivity.this, DashboardActivity.class);
             startActivity(intent);
         }
     }
@@ -66,7 +66,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             attemptSignIn();
         } else if (v.getId() == R.id.sign_in_sign_up) {
             Log.d(TAG, "Attempting to move to sign up activity.");
-            Intent intent = new Intent(SignInActivity.this, SignUpAcitivity.class);
+            Intent intent = new Intent(SignInActivity.this, SignUpActivity.class);
             intent.putExtra("email_address", mEmailAddressEditText.getText().toString());
             intent.putExtra("password", mPasswordEditText.getText().toString());
             startActivity(intent);
@@ -94,7 +94,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
                 getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
                 if (task.isSuccessful()) {
                     Log.d(TAG, "Successfuly signed in.");
-                    Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                    Intent intent = new Intent(SignInActivity.this, DashboardActivity.class);
                     startActivity(intent);
                 } else {
                     Log.w(TAG, "Failed to sign in.");

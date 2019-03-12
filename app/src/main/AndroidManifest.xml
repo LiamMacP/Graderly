@@ -21,14 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpAcitivity"
-            android:label="@string/sign_up_activity_name"/>
+        <activity android:name=".SignUpActivity"
+            android:label="@string/sign_up_activity_name" />
         <activity
             android:name=".ForgotPasswordActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden">
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".DashboardActivity" />
     </application>
 
 </manifest>

@@ -1,17 +1,21 @@
 <resources>
     <string name="app_name">Graderly</string>
 
-    <string name="title_activity_login">LoginActivity</string>
-
-    <string name="forgot_password_title">Forgot your password?</string>
-    <string name="forgot_password_instructions">Enter your email below to receive your password reset instructions.</string>
-    <string name="forgot_password_send_instructions">Send Instructions</string>
-    <string name="email_text">Email</string>
-    <string name="forgot_password_success">Your password reset email has been successfully sent.</string>
-    <string name="forgot_password_failure">Sorry your password reset email could not be send, please try again.</string>
-    <string name="password_text">Password</string>
     <string name="sign_in_send">Sign In</string>
     <string name="sign_in_forgot_password">Forgot Password</string>
     <string name="sign_in_create_account">Don\'t have an account?</string>
     <string name="sign_up_activity_name">Sign Up</string>
+
+    <string name="forgot_password_title">Forgot your password?</string>
+    <string name="forgot_password_instructions">Enter your email below to receive your password reset instructions.</string>
+    <string name="forgot_password_send_instructions">Send Instructions</string>
+    <string name="forgot_password_success">Your password reset email has been successfully sent.</string>
+    <string name="forgot_password_failure">Sorry your password reset email could not be send, please try again.</string>
+
+    <string name="email_text">Email</string>
+    <string name="password_text">Password</string>
+    <string name="forename_text">Forename</string>
+    <string name="surname_text">Surname</string>
+    <string name="confirm_password_text">Confirm Password</string>
+    <string name="mobile_number_text">Mobile Number</string>
 </resources>

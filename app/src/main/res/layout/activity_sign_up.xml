@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:id="@+id/sign_up_personal_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Personal"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginStart="@dimen/center_header_horizontal"
+            android:layout_marginEnd="@dimen/center_header_horizontal"
+            />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/sign_up_forename_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/center_header_horizontal"
+            android:layout_marginEnd="@dimen/center_header_horizontal">
+            <EditText android:id="@+id/sign_up_forename_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="@string/forename_text"
+                android:autofillHints="name"
+                tools:ignore="TextFields,UnusedAttribute"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/sign_up_surname_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/center_header_horizontal"
+            android:layout_marginEnd="@dimen/center_header_horizontal">
+            <EditText android:id="@+id/sign_up_surname_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:hint="@string/surname_text"
+                android:autofillHints="name"
+                tools:ignore="TextFields,UnusedAttribute"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/sign_up_email_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/center_header_horizontal"
+            android:layout_marginEnd="@dimen/center_header_horizontal">
+            <EditText android:id="@+id/sign_up_email_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint="@string/email_text"
+                android:autofillHints="email"
+                tools:ignore="TextFields,UnusedAttribute"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/sign_up_mobile_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/center_header_horizontal"
+            android:layout_marginEnd="@dimen/center_header_horizontal">
+            <EditText android:id="@+id/sign_up_mobile_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/mobile_number_text"
+                android:autofillHints="number"
+                tools:ignore="TextFields,UnusedAttribute"/>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sign_up_security_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_personal_layout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Security"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginStart="@dimen/center_header_horizontal"
+            android:layout_marginEnd="@dimen/center_header_horizontal"
+            />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/sign_up_password_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/center_header_horizontal"
+            android:layout_marginEnd="@dimen/center_header_horizontal">
+            <EditText android:id="@+id/sign_up_password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/password_text"
+                android:autofillHints="name"
+                tools:ignore="TextFields,UnusedAttribute"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/sign_up_confirm_password_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/center_header_horizontal"
+            android:layout_marginEnd="@dimen/center_header_horizontal">
+            <EditText android:id="@+id/sign_up_confirm_password_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="@string/confirm_password_text"
+                android:autofillHints="name"
+                tools:ignore="TextFields,UnusedAttribute"/>
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sign_up_send_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/center_instructions_horizontal"
+        android:layout_marginEnd="@dimen/center_header_horizontal"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_security_layout"
+        android:text="@string/sign_up_activity_name" />
+
+    <ProgressBar
+        android:id="@+id/sign_up_progress_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/center_instructions_horizontal"
+        android:layout_marginEnd="@dimen/center_instructions_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/sign_up_send_request"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+
+</android.support.constraint.ConstraintLayout>
